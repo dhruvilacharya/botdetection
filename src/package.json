@@ -1,0 +1,21 @@
+{
+  "name": "bot-detect-src",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && node build-bundle.mjs",
+    "run": "node run.mjs",
+    "serve": "npx serve . -p 3000",
+    "test:bot": "node test-bot-detection.mjs",
+    "verify": "node verify.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.2",
+    "playwright": "^1.49.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "jsdom": "^24.0.0"
+  }
+}
